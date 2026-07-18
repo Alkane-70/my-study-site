@@ -75,21 +75,22 @@ npm run dev
 
 现在你就拥有一个完全属于自己的、线上运行的考研助手了！🎉
 
-📁 项目结构
+## 📁 项目结构
 
-my-study-site/
-├── app/                  # 页面路由（学习进度、笔记、资料库、个人主页等）
-├── components/           # 可复用组件（导航栏、弹窗等）
-├── utils/supabase/       # Supabase 客户端配置
-├── sql/                  # 数据库初始化脚本
-│   ├── create_tables.sql
-│   └── storage_policies.sql
-├── .env.local.example    # 环境变量示例文件
-├── .gitignore
-├── README.md
-└── package.json
-
-💡 提醒
+- **app/**  
+  页面路由（学习进度、笔记、资料库、个人主页等）
+- **components/**  
+  可复用组件（导航栏、弹窗等）
+- **utils/supabase/**  
+  Supabase 客户端配置
+- **need/**  
+  SQL/(数据库初始化脚本（建表 + 存储策略）)
+  .env.local.example(环境变量示例文件)
+- **.gitignore**
+- **package.json**
+- **README.md**
+ ￴￴
+## 💡 提醒
 
 · 所有数据都安全地存储在你自己的 Supabase 数据库中，每个用户只能访问自己的数据。
 · 如果你长期（7天）不访问，Supabase 项目可能会休眠。可以使用 UptimeRobot 等免费监控服务保持活跃。
