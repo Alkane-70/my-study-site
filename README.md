@@ -1,6 +1,6 @@
 # 学习助手 - 个人学习记录网站
 
-一个多用户学习管理工具，支持学习进度跟踪、笔记记录、资料库存储，基于 Next.js v16.2.10 + Supabase 构建，零成本。
+一个多用户学习管理工具，支持学习进度跟踪、笔记记录、资料库存储，基于 Next.js v16.2.10 + Supabase 构建，零成本。一款支持多用户注册使用的个人学习记录与资料管理工具，基于Next.js+Supabase构建，零成本。
 
 ## 功能
 - 📚 分科学习进度管理（章节勾选、进度条、视频关联）
@@ -38,6 +38,7 @@
 ```bash
 git clone https://github.com/Alkane-70/my-study-site.git
 cd my-study-site
+```
 
 ### 第二步：在 Supabase 创建数据库
 
@@ -57,8 +58,10 @@ cd my-study-site
 
 ### 第四步：本地运行（可选）
 
+```bash
 npm install
 npm run dev
+```
 
 打开 http://localhost:3000 即可看到网站。
 
