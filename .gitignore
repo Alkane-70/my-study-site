@@ -18,3 +18,8 @@ yarn-error.log*
 
 # 其他
 .DS_Store
+
+# OpenNext / Cloudflare 构建产物
+.open-next/
+.wrangler/
+.vercel/
