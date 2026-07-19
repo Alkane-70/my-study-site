@@ -1,23 +1,14 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '@/utils/supabase/config'
 
 export async function middleware(request: NextRequest) {
-  // 诊断日志：确认 middleware 是否被调用，以及环境变量是否到位
-  console.log(
-    '[mw] enter',
-    request.nextUrl.pathname,
-    'url=',
-    !!process.env.NEXT_PUBLIC_SUPABASE_URL,
-    'key=',
-    !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-  )
-
   let supabaseResponse = NextResponse.next({ request })
 
   try {
     const supabase = createServerClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY,
       {
         cookies: {
           getAll() {
